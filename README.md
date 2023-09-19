@@ -1,6 +1,6 @@
 # TherapEase
 
-<!-- ![TherapEase Logo](link-to-your-logo.png) -->
+![TherapEase Logo](Therap-Ease_Logo.png)
 
 TherapEase is a mobile application designed to address mental health stigma and provide support to users in India. This repository contains the source code and workflows necessary to build and maintain the app.
 
