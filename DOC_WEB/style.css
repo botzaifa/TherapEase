@@ -1,13 +1,19 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
   box-sizing: border-box;
 }
+/* Example color variables */
+:root {
+  --primary-color: #ff004f;
+  --secondary-color: #03a2be;
+}
+
 body {
   background: black;
   color: white;
+  font-family: "Open Sans", sans-serif;
 }
 #header {
   width: 100%;
@@ -15,8 +21,43 @@ body {
   /* background-image:url(Premium_Vector___Engineers_day_concept-removebg-preview.png) ; */
   background-position: center;
 }
+/* Example background gradient for #header */
+#header {
+  background: linear-gradient(180deg, #000 0%, #333 100%);
+  margin: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
+.nav-text {
+  margin-top: 30px;
+}
+.nav-text li a {
+  background: linear-gradient(0, 0, 65, 0);
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.nav-text li a:hover {
+  font-size: 25px;
+}
+/* Make the navigation bar sticky */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  z-index: 100; /* Ensure the navigation is above other content */
+}
+/* Example text shadow for headings */
+h1,
+h2,
+h3 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .logo {
-  width: 140px;
+  width: 120px;
+  height: 120px;
 }
 .container {
   padding: 2px 10px;
@@ -63,6 +104,40 @@ nav ul li a:hover {
 .header-text h1 {
   font-size: 60px;
   margin-top: 20px;
+}
+
+.header-text h1 span {
+  color: #03a2be;
+}
+
+.header-text h1 span span {
+  color: #ff004f;
+}
+/* CSS */
+/* Keyframes for typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Apply the typing animation to .typing-animation */
+.typing-animation {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 5s steps(40) forwards;
+  margin-bottom: 10px; /* Add some spacing between lines */
+}
+
+.typing-animation span {
+  display: inline-block;
+  animation: typing s steps(40) forwards;
+  margin-left: 4px; /* Add some spacing between text and cursor */
 }
 
 .header-text h1 span {
@@ -184,6 +259,11 @@ nav ul li a:hover {
 .tab-contents.active-tab {
   display: block;
 }
+/* Example hover effect for portfolio images */
+.work img:hover {
+  transform: scale(1.05); /* Scale up image on hover */
+  transition: transform 0.3s ease-in-out;
+}
 
 /* services */
 #services {
@@ -194,6 +274,11 @@ nav ul li a:hover {
   flex-wrap: wrap;
   justify-content: space-between; /* Adjust this as needed for spacing */
   margin-top: 50px;
+}
+/* Example box shadow for .container and .service */
+.container,
+.service {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .service {
@@ -219,6 +304,15 @@ nav ul li a:hover {
 .service a:hover {
   color: #ff004f;
 }
+/* Example button transition */
+.service a {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.service a:hover {
+  background-color: #ff004f;
+  color: #fff;
+}
+
 .services-list .service {
   background: #262626;
   padding: 40px;
@@ -312,4 +406,3 @@ nav ul li a:hover {
     width: 100%;
   }
 }
-
