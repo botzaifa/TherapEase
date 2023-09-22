@@ -72,6 +72,41 @@ nav ul li a:hover {
 .header-text h1 span span {
   color: #ff004f;
 }
+/* CSS */
+/* Keyframes for typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Apply the typing animation to .typing-animation */
+.typing-animation {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 5s steps(40) forwards;
+  margin-bottom: 10px; /* Add some spacing between lines */
+}
+
+.typing-animation span {
+  display: inline-block;
+  animation: typing s steps(40) forwards;
+  margin-left: 4px; /* Add some spacing between text and cursor */
+}
+
+.header-text h1 span {
+  color: #03a2be;
+}
+
+.header-text h1 span span {
+  color: #ff004f;
+}
+
 
 /* About section */
 #about {
