@@ -1,0 +1,110 @@
+/* Reset some default styles and apply a box-sizing border-box to all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set a base font size and style */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+  }
+  
+  /* Create a container to center content and limit its width */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Apply responsive styles for navigation */
+  nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #ff004f;
+  }
+  
+  /* Apply responsive styles for header text */
+  .header-text {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .header-text h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  
+  /* Apply responsive styles for images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Apply responsive styles for columns */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .about-col-1,
+  .about-col-2 {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    .header-text h1 {
+      font-size: 1.5rem;
+    }
+  
+    nav {
+      padding: 10px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    .row {
+      flex-direction: column;
+    }
+  
+    .about-col-1,
+    .about-col-2 {
+      padding: 10px;
+    }
+  }
+  

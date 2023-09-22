@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: black;
+  color: white;
+}
+#header {
+  width: 100%;
+  height: 100vh;
+  /* background-image:url(Premium_Vector___Engineers_day_concept-removebg-preview.png) ; */
+  background-position: center;
+}
+.logo {
+  width: 140px;
+}
+.container {
+  padding: 2px 10px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0px 30px 40px 40px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  position: relative;
+}
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+nav ul li a:hover {
+  color: #fc4a83;
+}
+/* Base styles for larger screens */
+.header-text {
+  margin-top: 15%;
+  font-size: 30px;
+}
+
+.header-text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.header-text h1 span {
+  color: #03a2be;
+}
+
+.header-text h1 span span {
+  color: #ff004f;
+}
+
+/* About section */
+#about {
+  padding: 80px 0;
+  color: #fff;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-col-1 {
+  flex-basis: 35%;
+}
+
+.about-col-1 img {
+  width: 70%;
+  max-width: 70%; /* Ensure the image doesn't exceed its container's width */
+  /* height: 80%; Preserve aspect ratio */
+  border-radius: 70px 70px 50px 50px; /* Reduced border-radius for better mobile display */
+}
+
+.about-col-2 {
+  flex-basis: 55%;
+}
+
+.sub-title {
+  font-size: 40px; /* Reduced font size for smaller screens */
+  font-weight: 600;
+}
+
+/* Media query for smaller screens (adjust as needed) */
+@media screen and (max-width: 768px) {
+  .header-text {
+    text-align: center; /* Center align text on smaller screens */
+  }
+
+  .header-text h1 {
+    font-size: 40px; /* Reduce font size for smaller screens */
+    margin-top: 10px; /* Smaller margin top for spacing */
+  }
+
+  .sub-title {
+    font-size: 32px; /* Reduce font size for smaller screens */
+  }
+
+  .about-col-1 {
+    flex-basis: 100%; /* Full width for image on smaller screens */
+  }
+
+  .about-col-1 img {
+    border-radius: 70px 70px 50px 50px; /* Remove border radius for full-width image */
+  }
+
+  .about-col-2 {
+    flex-basis: 100%; /* Full width for text on smaller screens */
+  }
+}
+.about-image {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.about-image.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+.team-tab {
+  margin-right: 52px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+}
+.team-tab::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #03a2be;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.team-tab.active-link::after {
+  width: 50%;
+}
+.tab-contents ul li {
+  list-style-type: disc;
+}
+.tab-contents ul li span a {
+  color: #0099ff;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-decoration: none;
+  font-size: 20px;
+}
+.tab-contents {
+  display: none;
+}
+.tab-contents.active-tab {
+  display: block;
+}
+
+/* services */
+#services {
+  padding: 30px 0;
+}
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust this as needed for spacing */
+  margin-top: 50px;
+}
+
+.service {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .service {
+    width: 100%;
+  }
+}
+.service a {
+  text-decoration: none;
+  color: yellow;
+  margin-left: 100px;
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.service a:hover {
+  color: #ff004f;
+}
+.services-list .service {
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 20px 0px 20px 0px;
+  transition: 0.5s, transform(0.5s);
+}
+.services-list .service i {
+  font-size: 50px;
+  padding-bottom: 30px;
+  margin-left: 130px;
+}
+
+.services-list .service h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.services-list .service:hover {
+  /* background:#02729e ; */
+  transform: translateY(10px);
+}
+
+.services-list .service:hover:nth-child(1) {
+  background: #02729e; /* Hover background color for the first service */
+}
+
+.services-list .service:hover:nth-child(2) {
+  background: #4caf50; /* Hover background color for the second service */
+}
+
+.services-list .service:hover:nth-child(3) {
+  background: #ff004f; /* Hover background color for the third service */
+}
+
+/* Portfolio */
+#portfolio {
+  padding: 50px 0;
+  margin: 0;
+}
+.work {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  padding: 10px;
+  max-height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 40px;
+  font-size: 15px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.work:hover .layer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.work img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* This ensures the images fully fit inside their containers */
+}
+
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust this as needed for spacing */
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .work {
+    width: 100%;
+  }
+}
+
