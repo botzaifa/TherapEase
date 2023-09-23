@@ -92,15 +92,25 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
-nav ul li a:hover {
-  color: #fc4a83;
-}
+
 /* Base styles for larger screens */
 .header-text {
   margin-top: 15%;
   font-size: 30px;
+  /* box-shadow: 0px 0px 20px #00c3ff; */
+  padding: 20px;
+  border-radius: 15px;
+  /* box-shadow: 
+  0 0 10px rgba(0, 195, 255, 0.5), /* Shadow with color #00c3ff */
+  /* 0 0 10px rgba(255, 0, 79, 0.5); Shadow with color #ff004f */
+  box-shadow: -10px -10px 15px rgba(0, 195, 255, 0.5),
+    /* Top and left shadow */ 10px 10px 10px rgba(255, 0, 79, 0.5); /* Bottom and right shadow */
+  transition: box-shadow 0.3s ease-in-out;
 }
-
+.header-text:hover {
+  box-shadow: -5px -5px 10px rgba(0, 195, 255, 0.7),
+    /* Updated top and left shadow on hover */ 5px 5px 5px rgba(255, 0, 79, 0.7); /* Updated bottom and right shadow on hover */
+}
 .header-text h1 {
   font-size: 60px;
   margin-top: 20px;
@@ -125,8 +135,9 @@ nav ul li a:hover {
 }
 
 /* Apply the typing animation to .typing-animation */
-.typing-animation {
-  display: inline-block;
+.typing-animation p,
+.typing-animation h1 {
+  display: block;
   white-space: nowrap;
   overflow: hidden;
   width: 0;
@@ -303,14 +314,14 @@ nav ul li a:hover {
 
 .service a:hover {
   color: #ff004f;
+  background: none;
 }
 /* Example button transition */
 .service a {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .service a:hover {
- 
-  color: #fff;
+  color: #030300;
 }
 
 .services-list .service {
@@ -405,4 +416,122 @@ nav ul li a:hover {
   .work {
     width: 100%;
   }
+}
+
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid rgb(179, 1, 1);
+  padding: 14px 50px;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px #ff004f; /* Glow effect added */
+}
+
+.btn:hover {
+  background-color: #ff004f; /* Change background color on hover */
+}
+
+/* Contact information */
+.contact-left {
+  flex-basis: 35%;
+}
+.contact-right {
+  flex-basis: 60%;
+}
+.contact-left p {
+  margin-top: 30px;
+}
+.contact-left p i {
+  font-size: 25px;
+  margin-right: 15px;
+}
+.social-icons {
+  margin-top: 30px;
+}
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: antiquewhite;
+  display: inline-block;
+  transition: transform 0.1s;
+  margin-bottom: 10px;
+}
+.social-icons a:hover {
+  transform: translateY(-5px);
+}
+.btn-2 {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 30px;
+  color: rgb(255, 255, 255);
+  font-size: large;
+  max-width: 250px;
+}
+.btn-2 img {
+  max-width: 100%;
+  max-height: 50px;
+  transition: transform 0.1s;
+}
+.btn-2 img:hover {
+  transform: translateY(-5px);
+}
+
+.pdf {
+  text-decoration: none;
+  color: antiquewhite;
+  border-radius: 10px;
+
+  padding: 5px;
+  box-shadow: 0px 0px 20px #00c3ff;
+  display: flex;
+  max-width: 300px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.pdf:hover {
+  background: #00c3ff;
+  border: none;
+}
+.contact-left .pdf {
+  padding: 20px 5px 20px 5px;
+}
+.contact-right form {
+  width: 100%;
+}
+form input,
+form textarea {
+  width: 100%;
+  border: 0px;
+  outline: none;
+  background-color: #414140;
+  padding: 15px;
+  margin: 15px 0;
+  color: white;
+  font: 18px;
+  border-radius: 5px;
+}
+form button {
+  padding: 20px 5px 20px 5px;
+  border: 0px;
+  border-radius: 10px;
+  background: none;
+  box-shadow: 0px 0px 20px #ff004f;
+  cursor: pointer;
+  width: 220px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  display: block;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+form button i {
+  font-size: 20px;
+}
+form button:hover {
+  background-color: #ff004f; /* Change background color on hover */
 }
