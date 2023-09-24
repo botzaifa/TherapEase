@@ -17,6 +17,7 @@ body {
 }
 #header {
   width: 100%;
+
   height: 100vh;
   /* background-image:url(Premium_Vector___Engineers_day_concept-removebg-preview.png) ; */
   background-position: center;
@@ -27,9 +28,15 @@ body {
   margin: 0;
   margin-left: 0;
   padding-left: 0;
+  
+}
+nav{
+  border-radius: 20px ;
+
 }
 .nav-text {
   margin-top: 30px;
+  
 }
 .nav-text li a {
   background: linear-gradient(0, 0, 65, 0);
@@ -37,6 +44,7 @@ body {
   border-radius: 10px;
   font-size: 20px;
   font-weight: bold;
+
 }
 .nav-text li a:hover {
   font-size: 25px;
@@ -45,6 +53,7 @@ body {
 nav {
   position: sticky;
   top: 0;
+ 
   background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
   z-index: 100; /* Ensure the navigation is above other content */
 }
@@ -67,6 +76,13 @@ nav {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+  /* box-shadow: -10px -10px 15px rgb(255, 250, 250),
+   10px 10px 20px rgb(255, 255, 255); */
+  transition: box-shadow 0.3s ease-in-out;
+}
+nav:hover{
+  box-shadow: -10px -10px 15px #ff004f,
+  10px 10px 20px  #ff004f;
 }
 nav ul li {
   display: inline-block;
@@ -179,7 +195,7 @@ nav ul li a:hover::after {
   width: 70%;
   max-width: 70%; /* Ensure the image doesn't exceed its container's width */
   /* height: 80%; Preserve aspect ratio */
-  border-radius: 70px 70px 50px 50px; /* Reduced border-radius for better mobile display */
+  border-radius: 45px 45px 25px 25px; /* Reduced border-radius for better mobile display */
 }
 
 .about-col-2 {
@@ -533,5 +549,30 @@ form button i {
   font-size: 20px;
 }
 form button:hover {
-  background-color: #ff004f; /* Change background color on hover */
+  background-color: #ff0051; /* Change background color on hover */
 }
+
+/* Footter */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Copyright text styles */
+.copyright {
+  font-size: 14px;
+}
+
+/* Optional: Add styles for links in the footer */
+.copyright a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Optional: Add hover effect for links in the footer */
+.copyright a:hover {
+  text-decoration: underline;
+}
+
