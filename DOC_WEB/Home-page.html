@@ -16,10 +16,11 @@
             <nav>
                 <img src="1695108264226-removebg-preview.png" class="logo">
                 <ul class="nav-text">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About us</a></li>
-                    <li><a href="">About the project</a></li>
-                    <li><a href="">Contact us</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#portfolio">About the project</a></li>
+                    <li><a href="#contact">Contact us</a></li>
+
                 </ul>
             </nav>
             <!-- HTML -->
@@ -178,28 +179,38 @@
                     <p><i class="fa-solid fa-envelope" style="color: #ff7b00;"></i> kamaltripathi1431@gmail.com</p>
                     <p><i class="fa-solid fa-phone" style="color: #108708;"></i> +91 9167039367</p>
                     <div class="social-icons">
-                        
+
                         <a href=""> <i class="fa-brands fa-instagram" style="color: #fa006c;"></i> </a>
                         <a href=""><i class="fa-brands fa-github"></i></a>
                         <a href=""> <i class="fa-brands fa-linkedin" style="color: #068fff;"></i> </a>
-                       <a href=""><i class="fa-brands fa-facebook" style="color: #4282f0;"></i></a> 
+                        <a href=""><i class="fa-brands fa-facebook" style="color: #4282f0;"></i></a>
 
                     </div>
-                    <a href="https://play.google.com/store/apps/details?id=com.ulektz.TCET&pcampaignid=web_share" class="btn-2"><img src="playstore.png" > Download Our App</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.ulektz.TCET&pcampaignid=web_share"
+                        class="btn-2"><img src="playstore.png"> Download Our App</a>
                     <a href="Navkar bld bill.pdf" download class="pdf">Click to download Research Paper</a>
                 </div>
                 <div class="contact-right">
                     <form action="">
                         <input type="text" name="name" placeholder="Enter your Name" required>
                         <input type="email" name="email" placeholder="Enter your Email" required>
-                        <textarea name="message" id=""  rows="6" placeholder="Enter your message"></textarea>
-                        <button type="submit"><i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i> Submit</button>
+                        <textarea name="message" id="" rows="6" placeholder="Enter your message"></textarea>
+                        <button type="submit"><i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i>
+                            Submit</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="copyright">
+            &copy; 2023 Your Website Name. All rights reserved. | Designed by <a href="#">Therap-Ease</a>
+        </div>
+    </footer>
 
     <script>
         var teamTabs = document.getElementsByClassName("team-tab");
@@ -237,6 +248,29 @@
 
 
     </script>
+    <script>
+        // Function to smoothly scroll to a target element
+        function scrollToElement(targetId) {
+           const targetElement = document.getElementById(targetId);
+           if (targetElement) {
+              window.scrollTo({
+                 top: targetElement.offsetTop,
+                 behavior: 'smooth'
+              });
+           }
+        }
+     
+        // Add click event listeners to your navigation links
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+           link.addEventListener('click', function (event) {
+              event.preventDefault();
+              const targetId = this.getAttribute('href').substring(1); // Remove the '#' character
+              scrollToElement(targetId);
+           });
+        });
+     </script>
+     
 </body>
 
 </html>
