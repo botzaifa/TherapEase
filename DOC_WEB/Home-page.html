@@ -191,13 +191,14 @@
                     <a href="Navkar bld bill.pdf" download class="pdf">Click to download Research Paper</a>
                 </div>
                 <div class="contact-right">
-                    <form action="">
-                        <input type="text" name="name" placeholder="Enter your Name" required>
-                        <input type="email" name="email" placeholder="Enter your Email" required>
-                        <textarea name="message" id="" rows="6" placeholder="Enter your message"></textarea>
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Enter your Name" required>
+                        <input type="email" name="Email" placeholder="Enter your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Enter your message"></textarea>
                         <button type="submit"><i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i>
                             Submit</button>
                     </form>
+                    <span id="span">Hello</span>
                 </div>
             </div>
         </div>
@@ -251,26 +252,46 @@
     <script>
         // Function to smoothly scroll to a target element
         function scrollToElement(targetId) {
-           const targetElement = document.getElementById(targetId);
-           if (targetElement) {
-              window.scrollTo({
-                 top: targetElement.offsetTop,
-                 behavior: 'smooth'
-              });
-           }
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         }
-     
+
         // Add click event listeners to your navigation links
         const navLinks = document.querySelectorAll('nav a');
         navLinks.forEach(link => {
-           link.addEventListener('click', function (event) {
-              event.preventDefault();
-              const targetId = this.getAttribute('href').substring(1); // Remove the '#' character
-              scrollToElement(targetId);
-           });
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1); // Remove the '#' character
+                scrollToElement(targetId);
+            });
         });
-     </script>
-     
+    </script>
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyE10ryeoqbsGiDkacxt16mZix2Ih5Z79cPQj7EtdDQlss17HcVEoXdXjlE-NDiZ6b-zQ/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const span = document.getElementById('span');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    span.innerHTML = 'Message Sent successfully';
+                    setTimeout(function () {
+                        span.innerHTML = '';
+                    }, 3000);
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+
 </body>
 
 </html>
