@@ -233,6 +233,7 @@ nav ul li a:hover::after {
   .about-col-2 {
     flex-basis: 100%; /* Full width for text on smaller screens */
   }
+  
 }
 .about-image {
   opacity: 0;
@@ -317,6 +318,10 @@ nav ul li a:hover::after {
 @media screen and (max-width: 768px) {
   .service {
     width: 100%;
+  }
+  nav .fa-solid{
+    display: block;
+    
   }
 }
 .service a {
@@ -432,6 +437,7 @@ nav ul li a:hover::after {
   .work {
     width: 100%;
   }
+ 
 }
 
 .btn {
@@ -574,5 +580,20 @@ footer {
 /* Optional: Add hover effect for links in the footer */
 .copyright a:hover {
   text-decoration: underline;
+
 }
 
+footer:hover{
+  background: #1d1d1d;
+}
+
+/* Nav display */
+
+#span{
+  color: #61b752;
+  margin-top: -10px;
+  display: block;
+  padding: 10px;
+  font-weight: bold;
+ 
+}
