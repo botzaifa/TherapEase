@@ -1,9 +1,9 @@
 * {
   margin: 0;
   padding: 0;
-
   box-sizing: border-box;
 }
+
 /* Example color variables */
 :root {
   --primary-color: #ff004f;
@@ -15,52 +15,43 @@ body {
   color: white;
   font-family: "Open Sans", sans-serif;
 }
+
 #header {
   width: 100%;
-
   height: 100vh;
-  /* background-image:url(Premium_Vector___Engineers_day_concept-removebg-preview.png) ; */
+  background: linear-gradient(180deg, #000 0%, #333 100%);
   background-position: center;
 }
-/* Example background gradient for #header */
-#header {
-  background: linear-gradient(180deg, #000 0%, #333 100%);
-  margin: 0;
-  margin-left: 0;
-  padding-left: 0;
-  
-}
-nav{
-  border-radius: 20px ;
 
+nav {
+  border-radius: 20px;
 }
+
 .nav-text {
   margin-top: 30px;
-  
 }
+
 .nav-text li a {
   background: linear-gradient(0, 0, 65, 0);
   padding: 8px;
   border-radius: 10px;
   font-size: 20px;
   font-weight: bold;
-
 }
+
 .nav-text li a:hover {
   font-size: 25px;
 }
+
 /* Make the navigation bar sticky */
 nav {
   position: sticky;
   top: 0;
- 
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-  z-index: 100; /* Ensure the navigation is above other content */
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
 }
-/* Example text shadow for headings */
-h1,
-h2,
-h3 {
+
+h1, h2, h3 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -68,33 +59,36 @@ h3 {
   width: 120px;
   height: 120px;
 }
+
 .container {
   padding: 2px 10px;
 }
+
 nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* box-shadow: -10px -10px 15px rgb(255, 250, 250),
-   10px 10px 20px rgb(255, 255, 255); */
   transition: box-shadow 0.3s ease-in-out;
 }
-nav:hover{
-  box-shadow: -10px -10px 15px #ff004f,
-  10px 10px 20px  #ff004f;
+
+nav:hover {
+  box-shadow: -10px -10px 15px #ff004f, 10px 10px 20px #ff004f;
 }
+
 nav ul li {
   display: inline-block;
   list-style: none;
   margin: 0px 30px 40px 40px;
 }
+
 nav ul li a {
   text-decoration: none;
   color: white;
   font-size: 18px;
   position: relative;
 }
+
 nav ul li a::after {
   content: "";
   width: 0;
@@ -105,6 +99,7 @@ nav ul li a::after {
   bottom: -6px;
   transition: 0.5s;
 }
+
 nav ul li a:hover::after {
   width: 100%;
 }
@@ -113,20 +108,18 @@ nav ul li a:hover::after {
 .header-text {
   margin-top: 15%;
   font-size: 30px;
-  /* box-shadow: 0px 0px 20px #00c3ff; */
   padding: 20px;
   border-radius: 15px;
-  /* box-shadow: 
-  0 0 10px rgba(0, 195, 255, 0.5), /* Shadow with color #00c3ff */
-  /* 0 0 10px rgba(255, 0, 79, 0.5); Shadow with color #ff004f */
   box-shadow: -10px -10px 15px rgba(0, 195, 255, 0.5),
-    /* Top and left shadow */ 10px 10px 10px rgba(255, 0, 79, 0.5); /* Bottom and right shadow */
+    10px 10px 10px rgba(255, 0, 79, 0.5);
   transition: box-shadow 0.3s ease-in-out;
 }
+
 .header-text:hover {
   box-shadow: -5px -5px 10px rgba(0, 195, 255, 0.7),
-    /* Updated top and left shadow on hover */ 5px 5px 5px rgba(255, 0, 79, 0.7); /* Updated bottom and right shadow on hover */
+    5px 5px 5px rgba(255, 0, 79, 0.7);
 }
+
 .header-text h1 {
   font-size: 60px;
   margin-top: 20px;
@@ -139,7 +132,7 @@ nav ul li a:hover::after {
 .header-text h1 span span {
   color: #ff004f;
 }
-/* CSS */
+
 /* Keyframes for typing animation */
 @keyframes typing {
   from {
@@ -150,7 +143,6 @@ nav ul li a:hover::after {
   }
 }
 
-/* Apply the typing animation to .typing-animation */
 .typing-animation p,
 .typing-animation h1 {
   display: block;
@@ -158,13 +150,13 @@ nav ul li a:hover::after {
   overflow: hidden;
   width: 0;
   animation: typing 5s steps(40) forwards;
-  margin-bottom: 10px; /* Add some spacing between lines */
+  margin-bottom: 10px;
 }
 
 .typing-animation span {
   display: inline-block;
   animation: typing s steps(40) forwards;
-  margin-left: 4px; /* Add some spacing between text and cursor */
+  margin-left: 4px;
 }
 
 .header-text h1 span {
@@ -193,9 +185,8 @@ nav ul li a:hover::after {
 
 .about-col-1 img {
   width: 70%;
-  max-width: 70%; /* Ensure the image doesn't exceed its container's width */
-  /* height: 80%; Preserve aspect ratio */
-  border-radius: 45px 45px 25px 25px; /* Reduced border-radius for better mobile display */
+  max-width: 70%;
+  border-radius: 45px 45px 25px 25px;
 }
 
 .about-col-2 {
@@ -203,38 +194,37 @@ nav ul li a:hover::after {
 }
 
 .sub-title {
-  font-size: 40px; /* Reduced font size for smaller screens */
-  font-weight: 600;
+  font-size: 40px;
 }
 
 /* Media query for smaller screens (adjust as needed) */
 @media screen and (max-width: 768px) {
   .header-text {
-    text-align: center; /* Center align text on smaller screens */
+    text-align: center;
   }
 
   .header-text h1 {
-    font-size: 40px; /* Reduce font size for smaller screens */
-    margin-top: 10px; /* Smaller margin top for spacing */
+    font-size: 40px;
+    margin-top: 10px;
   }
 
   .sub-title {
-    font-size: 32px; /* Reduce font size for smaller screens */
+    font-size: 32px;
   }
 
   .about-col-1 {
-    flex-basis: 100%; /* Full width for image on smaller screens */
+    flex-basis: 100%;
   }
 
   .about-col-1 img {
-    border-radius: 70px 70px 50px 50px; /* Remove border radius for full-width image */
+    border-radius: 70px 70px 50px 50px;
   }
 
   .about-col-2 {
-    flex-basis: 100%; /* Full width for text on smaller screens */
+    flex-basis: 100%;
   }
-  
 }
+
 .about-image {
   opacity: 0;
   transform: translateY(50px);
@@ -250,6 +240,7 @@ nav ul li a:hover::after {
   display: flex;
   margin: 20px 0 40px;
 }
+
 .team-tab {
   margin-right: 52px;
   font-size: 18px;
@@ -257,6 +248,7 @@ nav ul li a:hover::after {
   font-weight: 500;
   position: relative;
 }
+
 .team-tab::after {
   content: "";
   width: 0;
@@ -271,9 +263,11 @@ nav ul li a:hover::after {
 .team-tab.active-link::after {
   width: 50%;
 }
+
 .tab-contents ul li {
   list-style-type: disc;
 }
+
 .tab-contents ul li span a {
   color: #0099ff;
   font-weight: bold;
@@ -281,15 +275,18 @@ nav ul li a:hover::after {
   text-decoration: none;
   font-size: 20px;
 }
+
 .tab-contents {
   display: none;
 }
+
 .tab-contents.active-tab {
   display: block;
 }
+
 /* Example hover effect for portfolio images */
 .work img:hover {
-  transform: scale(1.05); /* Scale up image on hover */
+  transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -297,13 +294,14 @@ nav ul li a:hover::after {
 #services {
   padding: 30px 0;
 }
+
 .services-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Adjust this as needed for spacing */
+  justify-content: space-between;
   margin-top: 50px;
 }
-/* Example box shadow for .container and .service */
+
 .container,
 .service {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -319,11 +317,11 @@ nav ul li a:hover::after {
   .service {
     width: 100%;
   }
-  nav .fa-solid{
+  nav .fa-solid {
     display: block;
-    
   }
 }
+
 .service a {
   text-decoration: none;
   color: yellow;
@@ -337,10 +335,11 @@ nav ul li a:hover::after {
   color: #ff004f;
   background: none;
 }
-/* Example button transition */
+
 .service a {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .service a:hover {
   color: #030300;
 }
@@ -353,6 +352,7 @@ nav ul li a:hover::after {
   border-radius: 20px 0px 20px 0px;
   transition: 0.5s, transform(0.5s);
 }
+
 .services-list .service i {
   font-size: 50px;
   padding-bottom: 30px;
@@ -365,21 +365,21 @@ nav ul li a:hover::after {
   margin-bottom: 15px;
   text-align: center;
 }
+
 .services-list .service:hover {
-  /* background:#02729e ; */
   transform: translateY(10px);
 }
 
 .services-list .service:hover:nth-child(1) {
-  background: #02729e; /* Hover background color for the first service */
+  background: #02729e;
 }
 
 .services-list .service:hover:nth-child(2) {
-  background: #4caf50; /* Hover background color for the second service */
+  background: #4caf50;
 }
 
 .services-list .service:hover:nth-child(3) {
-  background: #ff004f; /* Hover background color for the third service */
+  background: #ff004f;
 }
 
 /* Portfolio */
@@ -387,6 +387,7 @@ nav ul li a:hover::after {
   padding: 50px 0;
   margin: 0;
 }
+
 .work {
   width: calc(33.33% - 20px);
   margin-bottom: 20px;
@@ -423,13 +424,13 @@ nav ul li a:hover::after {
 .work img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* This ensures the images fully fit inside their containers */
+  object-fit: contain;
 }
 
 .work-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Adjust this as needed for spacing */
+  justify-content: space-between;
   margin-top: 50px;
 }
 
@@ -437,7 +438,6 @@ nav ul li a:hover::after {
   .work {
     width: 100%;
   }
- 
 }
 
 .btn {
@@ -450,30 +450,35 @@ nav ul li a:hover::after {
   color: white;
   transition: 0.5s;
   border-radius: 10px;
-  box-shadow: 0px 0px 20px #ff004f; /* Glow effect added */
+  box-shadow: 0px 0px 20px #ff004f;
 }
 
 .btn:hover {
-  background-color: #ff004f; /* Change background color on hover */
+  background-color: #ff004f;
 }
 
 /* Contact information */
 .contact-left {
   flex-basis: 35%;
 }
+
 .contact-right {
   flex-basis: 60%;
 }
+
 .contact-left p {
   margin-top: 30px;
 }
+
 .contact-left p i {
   font-size: 25px;
   margin-right: 15px;
 }
+
 .social-icons {
   margin-top: 30px;
 }
+
 .social-icons a {
   text-decoration: none;
   font-size: 30px;
@@ -483,9 +488,11 @@ nav ul li a:hover::after {
   transition: transform 0.1s;
   margin-bottom: 10px;
 }
+
 .social-icons a:hover {
   transform: translateY(-5px);
 }
+
 .btn-2 {
   text-decoration: none;
   display: block;
@@ -494,11 +501,13 @@ nav ul li a:hover::after {
   font-size: large;
   max-width: 250px;
 }
+
 .btn-2 img {
   max-width: 100%;
   max-height: 50px;
   transition: transform 0.1s;
 }
+
 .btn-2 img:hover {
   transform: translateY(-5px);
 }
@@ -507,7 +516,6 @@ nav ul li a:hover::after {
   text-decoration: none;
   color: antiquewhite;
   border-radius: 10px;
-
   padding: 5px;
   box-shadow: 0px 0px 20px #00c3ff;
   display: flex;
@@ -515,16 +523,20 @@ nav ul li a:hover::after {
   justify-content: center;
   margin-bottom: 10px;
 }
+
 .pdf:hover {
   background: #00c3ff;
   border: none;
 }
+
 .contact-left .pdf {
   padding: 20px 5px 20px 5px;
 }
+
 .contact-right form {
   width: 100%;
 }
+
 form input,
 form textarea {
   width: 100%;
@@ -537,6 +549,7 @@ form textarea {
   font: 18px;
   border-radius: 5px;
 }
+
 form button {
   padding: 20px 5px 20px 5px;
   border: 0px;
@@ -551,14 +564,16 @@ form button {
   margin-bottom: 20px;
   transition: 0.5s;
 }
+
 form button i {
   font-size: 20px;
 }
+
 form button:hover {
-  background-color: #ff0051; /* Change background color on hover */
+  background-color: #ff0051;
 }
 
-/* Footter */
+/* Footer */
 footer {
   background-color: #333;
   color: #fff;
@@ -580,20 +595,102 @@ footer {
 /* Optional: Add hover effect for links in the footer */
 .copyright a:hover {
   text-decoration: underline;
-
 }
 
-footer:hover{
+footer:hover {
   background: #1d1d1d;
 }
 
 /* Nav display */
 
-#span{
+#span {
   color: #61b752;
   margin-top: -10px;
   display: block;
   padding: 10px;
   font-weight: bold;
- 
+}
+
+/* Responsive CSS */
+
+@media screen and (max-width: 768px) {
+  /* Add your responsive styles here */
+  #header {
+    height: 70vh; /* Adjust height for smaller screens */
+  }
+
+  .nav-text li a {
+    font-size: 16px; /* Reduce font size for smaller screens */
+  }
+
+  .header-text {
+    margin-top: 10%; /* Adjust margin for smaller screens */
+    font-size: 24px; /* Reduce font size for smaller screens */
+  }
+
+  .header-text h1 {
+    font-size: 40px; /* Reduce font size for smaller screens */
+  }
+
+  .sub-title {
+    font-size: 28px; /* Reduce font size for smaller screens */
+  }
+
+  .about-col-1 img {
+    max-width: 100%; /* Adjust image width for smaller screens */
+  }
+
+  .tab-titles {
+    flex-wrap: wrap; /* Wrap tab titles for smaller screens */
+    margin-top: 20px; /* Adjust margin for smaller screens */
+  }
+
+  .team-tab {
+    margin-right: 20px; /* Adjust margin for smaller screens */
+    font-size: 16px; /* Reduce font size for smaller screens */
+  }
+
+  .tab-contents ul li span a {
+    font-size: 18px; /* Reduce font size for smaller screens */
+  }
+
+  .service a {
+    margin-left: 0; /* Reset margin for smaller screens */
+  }
+
+  .work {
+    width: 100%; /* Adjust width for smaller screens */
+  }
+
+  .work-list {
+    margin-top: 20px; /* Adjust margin for smaller screens */
+  }
+
+  .btn {
+    margin: 30px auto; /* Adjust margin for smaller screens */
+  }
+
+  .btn-2 {
+    margin-bottom: 20px; /* Adjust margin for smaller screens */
+  }
+
+  .pdf {
+    margin-bottom: 20px; /* Adjust margin for smaller screens */
+  }
+
+  .contact-left {
+    flex-basis: 100%; /* Adjust flex basis for smaller screens */
+  }
+
+  .contact-right {
+    flex-basis: 100%; /* Adjust flex basis for smaller screens */
+  }
+
+  .social-icons a {
+    font-size: 24px; /* Reduce font size for smaller screens */
+  }
+
+  .form button {
+    width: 100%; /* Adjust button width for smaller screens */
+  }
 }
